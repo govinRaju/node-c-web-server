@@ -51,6 +51,13 @@ app.get('/about',(req,res)=>{
   });
 });
 
+app.get('/project',(req,res)=> {
+  res.render('project.hbs',{
+    pageTitle :'project',
+    welcomeMessage:'bengining of the project portfolio page',
+    currentYear:new Date().getFullYear()
+  });
+});
 app.get('/bad',(req,res) =>{
   res.send({
     errorMessage:'Unable to load error'
